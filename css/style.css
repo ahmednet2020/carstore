@@ -1,0 +1,587 @@
+/*css ruls start*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    perspective: 500px;
+    direction: ltr;
+    font-family: 'Bree Serif', serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight:normal;
+    text-transform: lowercase;
+    background-color: #fff;
+}
+
+/*start my own framework*/
+.clear-fix{clear: both;}
+
+.container{
+    width: 90%;
+    max-width:940px;
+    margin: 0 auto;
+    padding: 0;
+}
+i{
+     color: #008ce1;
+}
+p{
+    color: #808080;
+    font-size: 1em;
+    font-weight: normal;
+}
+.content .about h2:after,
+.content .about h2:before,
+.content .search h2:after,
+.content .search h2:before{
+    content: "________________";
+    font-size: .1em;
+}
+/*end my own framework*/
+
+/*start wrapper*/
+.wrapper{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+/*start header*/
+.header{
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.header .top,
+.header .logo-menu,
+.slider{
+    padding-top: 10px;/*@media fix*/
+    padding-bottom: 10px;/*@media fix*/
+}
+/* start top*/
+.header .top{
+    display:block;
+    width: 100%;
+    background-color: #faf9f9;
+    overflow: hidden;
+}
+
+.header .top .info{
+    width: 60%;
+    display: inline-block;
+    font-size: 1em;
+    margin-right: 5%;
+}
+
+.header .top .info i{
+    display: inline-block;
+    margin-right: 1.5%;
+}
+
+.header .top .info i span{
+    display: inline;
+    color: #b4b4b4;
+}
+/*social-media in top and bottom*/
+.header .top .social-media,
+.footer .copy .social-media{
+    display: inline-block;
+    width: 35%;
+    direction: rtl;
+    float: right;
+    font-size: 1.1em;
+    text-align: right;
+    overflow: hidden;
+}
+.header .top .social-media a,
+.footer .copy .social-media a{
+    display: inline-block;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 1%;
+}
+.header .top .social-media a i,
+.footer .copy .social-media a i{
+    display: inline-block;
+    color: #b4b4b4;
+    
+}
+.header .top .social-media a:hover i,
+.footer .copy .social-media a:hover i{
+    display: inline-block;
+    color: #008ce1;
+    
+}
+/*end social-media/
+/* end top*/
+/*start logo-menu*/
+.header .logo-menu{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    
+}
+.header .logo-menu .logo{
+    width: 18%;
+    margin-right: 2%;
+    display: inline-block;
+    float: left;
+}
+.header .logo-menu .logo h2 {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    font-size: 2.7em;
+    color: #2c2d32;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.header .logo-menu .menu {
+    width: 60%;
+    display: inline-block;
+}
+.header .logo-menu .menu ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 3;
+    font-size: 1.4em;
+    text-align: center;
+}
+.header .logo-menu .menu ul li{
+    display: inline-block;
+    padding-right: 2%;
+}
+.header .logo-menu .menu ul li a{
+    text-decoration: none;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #2c2d32;
+}
+
+.header .logo-menu .menu ul li:hover a{
+    color: #fff;
+    background-color: #008ce1;
+    background-size: 100% 50%;
+    -webkit-transform: skewX(-25deg);
+    -o-transform: skewX(-25deg);
+    -ms-transform: skewX(-25deg);
+    -moz-transform: skewX(-25deg);
+     transform: skewX(-25deg);
+}
+
+.header .logo-menu .icons1{
+    width: 18%;
+    margin-left: 2%;
+    display: inline-block;
+    float: right;
+    direction: rtl;
+    font-size: 1.5em;
+    line-height: 3;
+}
+.header .logo-menu .icons1 a{
+    display: inline-block;
+    text-decoration: none;
+}
+/*end logo-menu*/
+/*end header*/
+/*start slider*/
+.slider{
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.slider .iconangle{
+    position: absolute;
+    width: 100%;
+    top:40%;
+    z-index: 50;
+}
+.slider .iconangle i{
+    display: block;
+    background-color: #008ce1;
+    padding: 10px;/*@media fix*/
+     color: #fff;
+   -webkit-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+     transform: skewX(-20deg);
+}
+.slider .iconangle i:first-of-type{
+    float: left;
+    margin-left: 2%;
+}
+.slider .iconangle i:last-of-type{
+    float: right;
+    margin-right: 2%;
+}
+.slider ul{
+    list-style: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 40% 0 0 0;
+    margin: 0;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+.slider ul li{
+    width: 20%;
+    display: inline-block;
+    cursor: pointer;
+}
+.slider ul li input{
+    display: none;
+}
+
+.slider ul li label{
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+     -webkit-transition: all 0.3s ease-out .2s;
+    -moz-transition: all 0.3s ease-out .2s;
+    -o-transition: all 0.3s ease-out .2s;
+    transition: all 0.3s ease-out .2s;
+    -webkit-transform-origin: top center;
+    -moz-transform-origin: top center;
+    -o-transform-origin: top center;
+    -ms-transform-origin: top center;
+    transform-origin: top center;
+    overflow: hidden;
+}
+.slider ul li img.imgsmall{
+    width:100%;
+    max-height: 100px;/*@media fix*/
+    padding: 0;
+    opacity: .6;
+    position: relative;
+    top: 0;
+    left: 0;
+     -webkit-transition: all 0.3s ease-out .2s;
+    -moz-transition: all 0.3s ease-out .2s;
+    -o-transition: all 0.3s ease-out .2s;
+    transition: all 0.3s ease-out .2s;
+    
+}
+.slider ul li .details{
+    padding: 2%;
+    display: block;
+    background-color: rgba(0,140,225, 0.5);
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+     -webkit-transition: all 0.3s ease-out .2s;
+    -moz-transition: all 0.3s ease-out .2s;
+    -o-transition: all 0.3s ease-out .2s;
+    transition: all 0.3s ease-out .2s;
+}
+.slider ul li .details h3,p{
+    display: inline-block;
+    direction: ltr;
+    padding: 0;
+    margin: 0;
+}
+.slider ul li .details h3{
+    font-size: 1.3em;
+}
+.slider ul li .details p{
+    font-size: .8em;
+    color: #fff;
+}
+
+.slider ul li label:hover > img.imgsmall,
+.slider ul li label:hover
+{
+    z-index: 5;
+    opacity: 1;
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+.slider ul li  label:hover .details{
+    z-index: 10;
+    bottom: 0%;
+}
+.slider ul li img.imgbig{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: translatex(-100%);
+     -webkit-transition: all 0.3s ease-out .2s;
+    -moz-transition: all 0.3s ease-out .2s;
+    -o-transition: all 0.3s ease-out .2s;
+    transition: all 0.3s ease-out .2s;
+}
+
+.slider ul li input:checked + img.imgbig{
+     transform: translatex(0);
+}
+
+/*end slider*/
+/*start content*/
+.content{
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+/*start about*/
+.content .about{
+    display: block;
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+    overflow: hidden;
+}
+.content .about h2{
+    display: block;
+    font-size: 2.5em;
+    color: #008ce1;
+}
+.content .about .data{
+    display: inline-block;
+    width: 32.333333%;
+    margin-top: 3%;
+    padding-right: 2%;
+    word-break: break-all;
+    text-align: left;
+    overflow: hidden;
+}
+.content .about .data i,h3{
+    display: inline-block;
+}
+
+.content .about .data h3{
+    font-size: 1.5em;
+    text-transform: uppercase;
+    vertical-align: super;
+}
+/*end about*/
+/*start search*/
+.content .search{
+    display: block;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    background-color: #19181e;
+    background-image: url(../img/bgsearch.png);
+    background-size: 100% 100%;
+    color: #fff;
+    overflow: hidden;
+}
+.content .search h2{
+    display: block;
+    font-size: 2.5em;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.content .search form{
+    display: block;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+}
+.content .search form input[type="button"]{
+    display: block;
+    background-color: #008ce1;
+    border: none;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    padding: 10px;
+    margin: 5% auto 0;
+}
+.content .search table{
+    width: 100%;
+}
+.content .search table label{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    font-size: 1.2em;
+    text-transform: capitalize;
+}
+.content .search tr{
+    width: 100%;
+}
+.content .search td{
+    width: 23%;
+    padding-right: 2%;
+}
+.content .search td select{
+    border-color: #37383c;
+    background-color: #171922;
+    border-style: solid;
+    color: #acacac;
+    width: 100%;
+    padding: 2%;
+}
+/*end search*/
+/*end content*/
+/*start footer*/
+.footer{
+    display: block;
+    width: 100%;
+    border-top: 1px solid #fff;
+    background-color: #19181e;
+    overflow: hidden;
+}
+/*start top wiget*/
+.footer .footerdata{
+    display: block;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: left;
+    overflow: hidden;
+}
+.footerdata  h3{
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 2em;
+    margin-top: 0;
+    font-weight: normal;
+}
+.footerdata .leftcol,
+.footerdata .tags,
+.footerdata .gallery,
+.footerdata .subscription
+{
+    display: inline-block;
+    width: 23%;
+    padding-right: 2%;
+    float: left;
+    overflow: hidden;
+}
+.footerdata .leftcol p{
+    word-wrap: break-word;
+}
+.footerdata .leftcol p a{
+   color: #008ce1;
+}
+.footerdata .leftcol .contact{
+    width: 100%;
+    display: block;
+    padding-top: 5%;
+    padding-left: 2%;
+    overflow: hidden;
+}
+.footerdata .leftcol .contact i{
+    margin-top: 10%;
+     color: #fff;
+}
+.footerdata .tags a{
+    display: block;
+    background-color: #3e3e40;
+    color: #19181e;
+    padding: 3px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    float: left;
+    text-decoration: none;
+}
+.footerdata .tags a:hover{
+    background-color: #008ce1;
+    color: #fff;
+}
+.gallery img{
+    width: 23%;
+    min-height: 60px;
+}
+
+.footerdata .subscription form{
+    display: block;
+    margin-top: 15%;
+    overflow: hidden;
+}
+.footerdata .subscription form input[type="text"]{
+    width: 100%;
+    background-color: #3e3e40;
+    padding: 5%;
+    border: #3e3e40 solid 1px;
+    margin-bottom: 15%;
+}
+.footerdata .subscription form input[type="button"]{
+     padding: 5% 0;
+    width: 50%;
+    margin: 0 auto;
+    display: block;
+    background-color: #008ce1;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: normal;
+}
+/*end top wiget*/
+/*start bottom wiget*/
+.footer .copy{
+    display: block;
+    width: 100%;
+    padding: 1%;
+    border-top: 1px solid #fff;
+    overflow: hidden;
+}
+.footer .copy .logoright{
+    display: inline-block;
+    width: 40%;
+}
+.footer .copy .logoright h4{
+    display: inline;
+    color: #fff;
+    text-transform: capitalize;
+}
+.footer .copy .logoright img{
+    width: 100%;
+    max-width: 50px;
+}
+
+.spinner {
+    position:fixed;
+	text-align: center;
+    z-index: 999;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    display: block;
+    background:-webkit-linear-gradient(left top, #1C5985, #3093C7);
+}
+.spinner h3 {
+	display: block;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: aqua;
+    overflow: hidden;
+    font-family: monospace;
+}
+/*end bottom wiget*/
+/*end footer*/
+/*end wrapper*/
