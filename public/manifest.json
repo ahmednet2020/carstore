@@ -1,0 +1,9 @@
+{
+"short_name": "carstore",
+"name": "carstore-Template",
+"icons": [],
+"start_url": "/",
+"display": "standalone",
+"theme_color": "#c3dbdb",
+"background_color": "#ffffff"
+}

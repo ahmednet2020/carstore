@@ -1,0 +1,14 @@
+{
+  "name": "carstore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:ahmednet2020/carstore.git",
+  "author": "ahmednet2020 <ahmednet03@gmail.com>",
+  "license": "MIT",
+  "scripts":{
+    "start": "firebase serve"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}

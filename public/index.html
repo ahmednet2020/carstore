@@ -3,6 +3,8 @@
     <head>
         <!-- meta for google -->
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <meta name="keywords" content="carband, متجر سيارات">
         <meta name="description" content="carband, as, superhero, ahmednet">
         <meta name="generator" content="carband, متجر سيارات, come we have best car with bast price ">
@@ -329,6 +331,22 @@
             <!-- end footer-->
 			
             <script src="js/slider.js"></script>
+            <script>
+                if ('serviceWorker' in navigator) {
+                    window.addEventListener('load',function (e) {
+                        navigator.serviceWorker
+                        .register('./js/sw.js')
+                        .then((reg) => {
+                            // Registration was successful
+                            console.log('ServiceWorker registration successful with scope: ', reg.scope);
+                        })
+                        .catch((err) => {
+                            // registration failed :(
+                            console.log('ServiceWorker registration failed: ', err);
+                        });
+                    });
+                }
+            </script>
         </div>
     </body>
 </html>
