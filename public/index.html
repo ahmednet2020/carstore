@@ -22,18 +22,33 @@
         <!-- style manual -->
         <link rel="stylesheet" href="css/style.css" type="text/css"> 
         <link rel="stylesheet" href="css/media.css" type="text/css">
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-messaging.js"></script>
+        <script type="text/javascript">
+            var firebaseConfig = {
+                apiKey: "AIzaSyCAYw4YioZfWPA0QK40jGvd1Mvhr2F1iJI",
+                authDomain: "carstore-d2063.firebaseapp.com",
+                databaseURL: "https://carstore-d2063.firebaseio.com",
+                projectId: "carstore-d2063",
+                storageBucket: "carstore-d2063.appspot.com",
+                messagingSenderId: "182851594715"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+        </script>
     </head>
     <body onload="slidershow();">
         <!-- page -->
         <div class="wrapper">
-            <div class="worker" style="
-            text-align: center;
-            background-color: #8af18e;
-            padding: 10px;
-            display:none">
-                <p style="display:block">do you want to add to home screen</p>
+            <div class="worker">
+                <p>do you want to add to home screen</p>
                 <button type="button" id="btn-yas">yas</button>
                 <button type="button" id="btn-no">no</button>
+            </div>
+            <div class="worker showNotification">
+                <p>do you want showNotification</p>
+                <button type="button" id="btnyas">yas</button>
+                <button type="button" id="btnno">no</button>
             </div>
             <!-- start header-->
             <div class="header">
@@ -341,24 +356,8 @@
                 </div>
             </div>
             <!-- end footer-->
-			
-            <script>
-                if ('serviceWorker' in navigator) {
-                    window.addEventListener('load',function (e) {
-                        navigator.serviceWorker
-                        .register('./sw.js')
-                        .then((reg) => {
-                            // Registration was successful
-                            console.log('ServiceWorker registration successful with scope: ', reg.scope);
-                        })
-                        .catch((err) => {
-                            // registration failed :(
-                            console.log('ServiceWorker registration failed: ', err);
-                        });
-                    });
-                }
-            </script>
             <script src="js/slider.js"></script>
+            <script src="js/sw-reg.js"></script>
         </div>
     </body>
 </html>

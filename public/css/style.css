@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 body{
-    perspective: 500px;
     direction: ltr;
     font-family: 'Bree Serif', serif;
     font-size: 14px;
@@ -18,9 +17,20 @@ body{
 }
 .worker
 {
+    display: none;
     text-align: center;
     background-color: #8af18e;
     padding: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 998;
+}
+.showNotification
+{
+    background-color: #f00;
+    z-index: 999;
 }
 .worker p
 {
