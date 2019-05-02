@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // https://web-push-codelab.glitch.me/ for test
 var publickey = "BJyjA0sQpxwfTVDyUp1GRinaN7xjREJf8ZsDI0h9T9OaNHs4N_KlogIHY2P0LXtULRzVwd6zcnaJQPUZI_tJB0U"
 var privatekey = "no_DcnE5RNSbxPVHghA8qPnB8Rp1NRq9mZ9gDORHkcE"
@@ -9,7 +8,6 @@ var deferredPrompt;
 var showNotification = document.querySelector(".showNotification")
 var btnyas = document.querySelector("#btnyas")
 var btnno = document.querySelector("#btnno")
-
 // check if browser support pwa
 if ('serviceWorker' in navigator) {
     window.addEventListener('load',function (e) {
@@ -23,26 +21,10 @@ if ('serviceWorker' in navigator) {
            }
         })
         .catch((err) => {
-=======
-var worker = document.querySelector(".worker")
-var btnYas = document.querySelector("#btn-yas")
-var btnNo = document.querySelector("#btn-no")
-if ('serviceWorker' in navigator) {
-    window.addEventListener('load',function (e) {
-        navigator.serviceWorker
-        .register('./sw.js')
-        .then((reg) => {
-            // Registration was successful
-            console.log('ServiceWorker registration successful with scope: ', reg.scope);
-        })
-        .catch((err) => {
-        // registration failed :(
->>>>>>> 2f13f7be7f77edcf387a9a9784d13f1cbee71e60
-            console.log('ServiceWorker registration failed: ', err);
+           console.log('ServiceWorker registration failed: ', err);
         });
     });
 }
-<<<<<<< HEAD
 // for Notification permission ui
 function initializeUI(swRegistration) {
   // Set the initial subscription value
@@ -97,8 +79,6 @@ function urlB64ToUint8Array(base64String) {
   return outputArray;
 }
 
-=======
->>>>>>> 2f13f7be7f77edcf387a9a9784d13f1cbee71e60
 // add to home screen
 window.addEventListener('beforeinstallprompt', (e) => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
