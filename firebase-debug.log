@@ -1,0 +1,56 @@
+[debug] [2019-05-02T11:25:48.233Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T11:25:48.249Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ahmed\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\bin\firebase.js serve --port 6530
+[debug] [2019-05-02T11:25:48.249Z] CLI Version:   6.2.2
+[debug] [2019-05-02T11:25:48.249Z] Platform:      win32
+[debug] [2019-05-02T11:25:48.249Z] Node Version:  v10.13.0
+[debug] [2019-05-02T11:25:48.249Z] Time:          Thu May 02 2019 13:25:48 GMT+0200 (Eastern European Standard Time)
+[debug] [2019-05-02T11:25:48.249Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-02T11:25:48.296Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T11:25:48.296Z] > authorizing via signed-in user
+[debug] [2019-05-02T11:25:48.296Z] [iam] checking project carstore-d2063 for permissions ["firebase.projects.get"]
+[debug] [2019-05-02T11:25:48.311Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-02T11:25:48.311Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-02T11:25:49.060Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T11:25:49.107Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/carstore-d2063:testIamPermissions  
+
+[debug] [2019-05-02T11:25:50.324Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T11:25:50.324Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/carstore-d2063  
+ 
+[debug] [2019-05-02T11:25:51.603Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\IT.corse\www\firebase-hosting\carstore'...
+[info] 
+[warn] !  functions: Cannot start emulator. Error: Cannot find module '@google-cloud/functions-emulator/src/config'
+[debug] [2019-05-02T11:25:51.619Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/182851594715/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-02T11:25:52.555Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:6530
+[debug] [2019-05-02T11:27:56.176Z] ----------------------------------------------------------------------
+[debug] [2019-05-02T11:27:56.186Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\ahmed\AppData\Local\Yarn\Data\global\node_modules\firebase-tools\lib\bin\firebase.js serve --port 9010
+[debug] [2019-05-02T11:27:56.187Z] CLI Version:   6.2.2
+[debug] [2019-05-02T11:27:56.187Z] Platform:      win32
+[debug] [2019-05-02T11:27:56.187Z] Node Version:  v10.13.0
+[debug] [2019-05-02T11:27:56.190Z] Time:          Thu May 02 2019 13:27:56 GMT+0200 (Eastern European Standard Time)
+[debug] [2019-05-02T11:27:56.190Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-02T11:27:56.235Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-02T11:27:56.237Z] > authorizing via signed-in user
+[debug] [2019-05-02T11:27:56.237Z] [iam] checking project carstore-d2063 for permissions ["firebase.projects.get"]
+[debug] [2019-05-02T11:27:56.249Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/carstore-d2063:testIamPermissions  
+
+[debug] [2019-05-02T11:27:57.710Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-02T11:27:57.715Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/carstore-d2063  
+ 
+[debug] [2019-05-02T11:27:58.740Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'D:\IT.corse\www\firebase-hosting\carstore'...
+[info] 
+[warn] !  functions: Cannot start emulator. Error: Cannot find module '@google-cloud/functions-emulator/src/config'
+[debug] [2019-05-02T11:27:58.758Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/182851594715/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-02T11:27:59.343Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] +  hosting: Local server: http://localhost:9010

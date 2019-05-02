@@ -11,6 +11,9 @@
         <!-- title of page -->
         <title title="carband">carband</title>
         <!-- links of page -->
+        <link rel="manifest" href="./manifest.json">
+        <link rel="icon" href="img/icons-192.png" type="image/png">
+        <meta name="theme-color" content="#317EFB"/>
         <!--reset-->
         <link rel="stylesheet" href="css/normalize.css" type="text/css">
         <!--fonts-->
@@ -23,6 +26,16 @@
     <body onload="slidershow();">
         <!-- page -->
         <div class="wrapper">
+            <div class="worker">
+                <p>do you want to add to home screen</p>
+                <button type="button" id="btn-yas">yas</button>
+                <button type="button" id="btn-no">no</button>
+            </div>
+            <div class="worker showNotification">
+                <p>do you want showNotification</p>
+                <button type="button" id="btnyas">yas</button>
+                <button type="button" id="btnno">no</button>
+            </div>
             <!-- start header-->
             <div class="header">
                 <div class="top">
@@ -329,24 +342,8 @@
                 </div>
             </div>
             <!-- end footer-->
-			
             <script src="js/slider.js"></script>
-            <script>
-                if ('serviceWorker' in navigator) {
-                    window.addEventListener('load',function (e) {
-                        navigator.serviceWorker
-                        .register('./js/sw.js')
-                        .then((reg) => {
-                            // Registration was successful
-                            console.log('ServiceWorker registration successful with scope: ', reg.scope);
-                        })
-                        .catch((err) => {
-                            // registration failed :(
-                            console.log('ServiceWorker registration failed: ', err);
-                        });
-                    });
-                }
-            </script>
+            <script src="js/sw-reg.js"></script>
         </div>
     </body>
 </html>
