@@ -1,3 +1,4 @@
+// initialize firebase 
 importScripts('https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/5.10.1/firebase-messaging.js');
 var firebaseConfig = {
@@ -11,6 +12,8 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const messaging = firebase.messaging();
+// this function work when website close by client
+// if it is open onMessage function will fire in sw-reg.js file 
 messaging.setBackgroundMessageHandler(function(payload) {
   // Customize notification here
   var notificationTitle = payload.data.title;
