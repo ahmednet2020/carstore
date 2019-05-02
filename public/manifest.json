@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "carstore-Template",
     "short_name": "carstore",
     "icons": [
@@ -17,4 +18,24 @@
     "display": "standalone",
     "theme_color": "#c3dbdb",
     "background_color": "#ffffff"
+=======
+"name": "carstore-Template",
+"short_name": "carstore",
+"icons": [
+    {
+        "src": "/img/icons-192.png",
+        "type": "image/png",
+        "sizes": "192x192"
+    },
+    {
+        "src": "/img/icons-512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+    }
+],
+"start_url": "/",
+"display": "standalone",
+"theme_color": "#c3dbdb",
+"background_color": "#ffffff",
+>>>>>>> 2f13f7be7f77edcf387a9a9784d13f1cbee71e60
 }
