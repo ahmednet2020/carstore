@@ -3,6 +3,7 @@ var showNotification = document.querySelector(".showNotification")
 var btnyas = document.querySelector("#btnyas")
 var btnno = document.querySelector("#btnno")
 var messaging = firebase.messaging();
+var fireStore = firebase.firestore();
 // Add the public key generated from the console here.
 messaging.usePublicVapidKey(publickey);
 if ('serviceWorker' in navigator) {
@@ -30,9 +31,7 @@ function firebaseRequest() {
       e.preventDefault()
       messaging.requestPermission().then(function() {
         console.log('Notification permission granted.');
-        messaging.onMessage(function(payload) {
-          console.log('Message received. ', payload);
-        })
+        sendToken()
       }).catch(function(err) {
         console.log('Unable to get permission to notify.', err);
       });
@@ -42,10 +41,28 @@ function firebaseRequest() {
       e.preventDefault()
   })
 }
+messaging.onMessage(function(payload) {
+  console.log('Message received. ', payload);
+})
 // get fcm sdk teken user
-messaging.getToken().then(function(teken) {
-  console.log(teken)
+function sendToken() {
+  messaging.getToken().then(function(token) {
+    let FCMkey = token;
+    fireStore.collection("FCMkeys").doc(FCMkey).set({
+      token: FCMkey,
+      date: new Date()
+    })
+    .then(function(docRef) {
+      console.log("Document written with ID: ", docRef);
+    })
+    .catch(function(error) {
+      console.error("Error adding document: ", error);
+    });
 
-}).catch(function (err) {
-      console.log("err" + err);
+  }).catch(function (err) {
+        console.log("err" + err);
+  })
+}
+messaging.onTokenRefresh(function() {
+  sendToken()
 })
