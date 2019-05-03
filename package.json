@@ -6,7 +6,7 @@
   "author": "ahmednet2020 <ahmednet03@gmail.com>",
   "license": "MIT",
   "scripts":{
-    "start": "firebase serve --port 9010"
+    "start": "firebase serve --port 9010 || live-server ./public/ --port=9010"
   },
   "devDependencies": {
     "live-server": "^1.2.1"
