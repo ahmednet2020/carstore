@@ -5,10 +5,11 @@
   "repository": "git@github.com:ahmednet2020/carstore.git",
   "author": "ahmednet2020 <ahmednet03@gmail.com>",
   "license": "MIT",
-  "scripts":{
-    "start": "firebase serve --port 1230"
+  "scripts": {
+    "start": "firebase serve --port 5430"
   },
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "live-server": "^1.2.1",
+    "workbox-cli": "^4.3.1"
   }
 }
